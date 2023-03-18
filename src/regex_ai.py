@@ -64,4 +64,4 @@ while True:
             else:
                 goodbyes.append(goodbye)
                 goodbye_pattern = re.compile(r"^(" + "|".join(goodbyes) + ")", re.IGNORECASE)
-        print(f"Detected a goodbye: {goodbye} with confidence level {confidence}")
+                print(f"Detected a goodbye: {goodbye} with confidence level {confidence}")
