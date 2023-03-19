@@ -4,12 +4,14 @@ from nltk.tokenize import regexp_tokenize
 import re
 import getpass
 
+thisuser = getpass.getuser()
+
 # Define the patterns and responses for the chatbot
 patterns = {
-    r"\bhi\b|\bhello\b|\bhey\b|\bwhassup\b|\bsup\b|\bwassup\b|\bwhat('s| is)\b \bup\b|\bahoy\b|\bwhats\b \bup\b|\bgreetings\b": ['Hello!', 'Hi there!', 'Hey!', 'Greetings!', 'Good day!', 'Nice to see you!', 'Hey there!'],
-    r"\bwhat('s| is)\b \byour\b \bname\??\b": ['My name is LuminaNMP-1.', 'I am LuminaNMP-1.', 'You can call me Lumina.', 'I go by LuminaNMP-1.', 'LuminaNMP-1 is my name.'],
+    r"\bhi\b|\bhello\b|\bhey\b|\bwhassup\b|\bsup\b|\bwassup\b|\bwhat('s| is)\b \bup\b|\bahoy\b|\bwhats\b \bup\b|\bgreetings\b": ['Hello!', 'Hi there!', 'Hey!', 'Greetings!', 'Good day!', 'Nice to see you!', 'Hey there!', "G'day!", f"Hello, {thisuser}!", f"Hey, {thisuser}!", f"Greetings, {thisuser}!", f"Good day, {thisuser}!", f"G'day, {thisuser}!", f"Nice to see you, {thisuser}!", f"Hey there, {thisuser}!"],
+    r"\bwhat('s| is)\b \byour\b \bname\??\b": ['My name is LuminaNMP-1.', 'I am LuminaNMP-1.', "You can call me LuminaNMP-1, LuminaNMP, or Lumina. I don't mind too much.", 'I go by LuminaNMP-1.', 'LuminaNMP-1 is my name.'],
     r"\bhow\b \bare\b \byou\??\b|\bhow\b \bare\b \byou\b \bdoin('|g)\??\b|\bhow\b \bdo\b \byou\b \bfeel\??\b": ['I am doing well, thank you!', 'I am good, thanks for asking.', 'I feel great!', 'I am functioning properly.', 'I am well, how about you?', 'I am feeling wonderful, thank you for asking.'],
-    r"\bbye\b|\bgoodbye\b|\bgood\b \bbye\b|\bsee\b \b(u|you|ya)\b|\bcy(a|ou)\b|\blater\b|\blaters\b|\bsee you soon\b|\badios\b": ['Goodbye!', 'See you later!', 'Bye!', 'See you later!', 'Farewell!', 'Take care!', 'Until next time!', 'Bye-bye!', 'Have a good day!', 'Catch you later.'],
+    r"\bbye\b|\bgoodbye\b|\bgood\b \bbye\b|\bsee\b \b(u|you|ya)\b|\bcy(a|ou)\b|\blater\b|\blaters\b|\bsee you soon\b|\badios\b": ['Goodbye!', 'See you later!', 'Bye!', 'See you later!', 'Farewell!', 'Take care!', 'Until next time!', 'Bye-bye!', 'Have a good day!', 'Catch you later.']
 }
 
 # Define regular expressions to match specific patterns
@@ -27,7 +29,7 @@ patterns_re[pattern_re] = random.choice(list(patterns.values()))
 # Start the chatbot conversation
 print("Hi, I'm LuminaNMP-1. How can I help you today?")
 while True:
-    user_input = input(f'{getpass.getuser()} > ')
+    user_input = input(f'{thisuser} > ')
     if user_input.lower() in ['exit', 'quit']:
         break
     
