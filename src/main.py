@@ -8,10 +8,10 @@ thisuser = getpass.getuser()
 
 # Define the patterns and responses for the chatbot
 patterns = {
-    r"\bhi\b|\bhello\b|\bhey\b|\bwhassup\b|\bsup\b|\bwassup\b|\bwhat('s| is)\b \bup\b|\bahoy\b|\bwhats\b \bup\b|\bgreetings\b": ['Hello!', 'Hi there!', 'Hey!', 'Greetings!', 'Good day!', 'Nice to see you!', 'Hey there!', "G'day!", f"Hello, {thisuser}!", f"Hey, {thisuser}!", f"Greetings, {thisuser}!", f"Good day, {thisuser}!", f"G'day, {thisuser}!", f"Nice to see you, {thisuser}!", f"Hey there, {thisuser}!"],
-    r"\bwhat('s| is)\b \byour\b \bname\??\b": ['My name is LuminaNMP-1.', 'I am LuminaNMP-1.', "You can call me LuminaNMP-1, LuminaNMP, or Lumina. I don't mind too much.", 'I go by LuminaNMP-1.', 'LuminaNMP-1 is my name.'],
-    r"\bhow\b \bare\b \byou\??\b|\bhow\b \bare\b \byou\b \bdoin('|g)\??\b|\bhow\b \bdo\b \byou\b \bfeel\??\b": ['I am doing well, thank you!', 'I am good, thanks for asking.', 'I feel great!', 'I am functioning properly.', 'I am well, how about you?', 'I am feeling wonderful, thank you for asking.'],
-    r"\bbye\b|\bgoodbye\b|\bgood\b \bbye\b|\bsee\b \b(u|you|ya)\b|\bcy(a|ou)\b|\blater\b|\blaters\b|\bsee you soon\b|\badios\b": ['Goodbye!', 'See you later!', 'Bye!', 'See you later!', 'Farewell!', 'Take care!', 'Until next time!', 'Bye-bye!', 'Have a good day!', 'Catch you later.']
+    r"\bhi\b|\bhello\b|\bhey\b|\bwhassup\b|\bsup\b|\bwassup\b|\bwhat('s| is) up\b|\bahoy\b|\bwhats up\b|\bgreetings\b": ['Hello!', 'Hi there!', 'Hey!', 'Greetings!', 'Good day!', 'Nice to see you!', 'Hey there!', "G'day!", f"Hello, {thisuser}!", f"Hey, {thisuser}!", f"Greetings, {thisuser}!", f"Good day, {thisuser}!", f"G'day, {thisuser}!", f"Nice to see you, {thisuser}!", f"Hey there, {thisuser}!"],
+    r"\bwhat is your name\b\??|\bwho are you\b\??|\bwho're you\b\??": ['My name is LuminaNMP-1.', 'I am LuminaNMP-1.', "You can call me LuminaNMP-1, LuminaNMP, or Lumina. I don't mind too much.", 'I go by LuminaNMP-1.', 'LuminaNMP-1 is my name.'],
+    r"\bhow are you\b\??|\bhow are you doin('|g)\b\??|\bhow do you feel\b\??": ['I am doing well, thank you!', 'I am good, thanks for asking.', 'I feel great!', 'I am functioning properly.', 'I am well, how about you?', 'I am feeling wonderful, thank you for asking.'],
+    r"\bbye\b|\bgoodbye\b|\bgood bye\b|\bsee you\b|\bsee ya\b|\bsee u\b|cy(a|ou)|\blater\b|\blaters\b|\bsee you soon\b|\badios\b": ['Goodbye!', 'See you later!', 'Bye!', 'See you later!', 'Farewell!', 'Take care!', 'Until next time!', 'Bye-bye!', 'Have a good day!', 'Catch you later.']
 }
 
 # Define regular expressions to match specific patterns
